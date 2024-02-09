@@ -1,0 +1,53 @@
+Introduction
+============
+
+Gatekeeper is a command line PHP utility to help test website user access.
+If you have multiple user levels it can test every page for every user
+level to check who can access that page.
+So for example you can check that only admin users can access the administration
+pages.
+
+Output is a csv file showing a grid of each page and each user level.
+There's also a result of 0 for success or 1 for failure, so it can be automatically run
+and every page checked e.g. at deployment.
+
+
+I develop and maintain large site with a dozen user levels and hundreds of pages, so
+Gatekeeper lets me check quickly if all pages are accessible by only their
+intended users.
+
+Website pages are defined in xml files in the data folder, specifying login account
+details and pages to test.
+
+The quickest way to get started testing your own site is to take one of the sample files
+and add your own site details.
+
+Installing
+==========
+
+To install you'll need composer (from getcomposer.org)
+
+composer install
+
+then run gatekeeper from the command line
+php yii gate/keeper
+
+Requirements
+============
+PHP 7 or greater
+Composer
+PHP extensions: ext-ctype, ext-curl, ext-dom, ext-json, ext-libxml
+ext-mbstring, ext-phar, ext-xml, ext-tokenizer, ext-xmlwriter, lib-pcre
+
+Built on Yii Framework: Yii 2 Basic Project Template [Yii 2](http://www.yiiframework.com/
+
+
+Enjoy!
+
+Richard Brown
+richard@towerwebdesign.co.uk
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.  This file is offered as-is,
+without any warranty.
